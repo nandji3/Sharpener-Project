@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Registration Using Bootstrap</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <link href="styles.css" rel="style sheet" />
+  </head>
+  <body>
+    <div
+      class="vh-100"
+      style="background-image: url('Registration.jpg'); background-size: cover"
+    >
+      <div class="container mt-3">
+        <div class="card">
+          <div class="card-header text-center">
+            <h3 style="color: coral">Book a call</h3>
+            <h6>
+              Book a call slot and representative will call you within 1hr of
+              selected time
+            </h6>
+          </div>
+          <div class="card-body">
+            <form action="#" onsubmit="userInfo(event)">
+              <div class="form-name mb-auto mt-auto m-auto">
+                <lable for="name" class="form-label">Name : </lable>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  name="name"
+                  placeholder="Enter Full Name"
+                />
+              </div>
+              <div class="form-email">
+                <lable for="email" class="form-label">Email : </lable>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                  placeholder="Enter email"
+                />
+              </div>
+              <div class="form-phone">
+                <lable for="phone" class="form-label">Phone : </lable>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="phone"
+                  name="phone"
+                  placeholder="Enter phone no."
+                />
+              </div>
+              <div class="form-date-time">
+                <lable for="date" class="form-label"
+                  >Date & Time for call :
+                </lable>
+                <input
+                  type="date"
+                  class="form-control mt-1"
+                  id="date"
+                  name="date"
+                />
+                <input
+                  type="time"
+                  class="form-control mt-1"
+                  id="time"
+                  name="time"
+                />
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary align-content-center mt-1"
+              >
+                GET A CALL
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function userInfo(event) {
+        const Name = document.getElementById("name").value;
+        console.log(Name);
+        const Email = document.getElementById("email").value;
+        console.log(Email);
+        const Phone = document.getElementById("phone").value;
+        console.log(Phone);
+        const Date = document.getElementById("date").value;
+        console.log(Date);
+        const Time = document.getElementById("time").value;
+        console.log(Time);
+      }
+    </script>
+  </body>
+</html>

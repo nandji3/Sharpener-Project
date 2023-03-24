@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <body>
+    <form action="#" onsubmit="onSignup(event)">
+      <label>Name : </label>
+      <input type="text" name="username" required /><br /><br />
+      <label>Email : </label>
+      <input type="text" name="email" required /><br /><br />
+      <label>Mobile No. : </label>
+      <input type="tel" name="Mobile" required /><br /><br />
+      <label>Password : </label>
+      <input type="password" name="password" required /><br /><br />
+      <button>Sign Up</button>
+    </form>
+    <script>
+      function onSignup(event) {
+        event.preventDefault(); //to avoid the reload page
+        console.log(event.target.username.value);
+        console.log(event.target.email.value);
+        console.log(event.target.Mobile.value);
+        console.log(event.target.password.value);
+      }
+    </script>
+  </body>
+</html>

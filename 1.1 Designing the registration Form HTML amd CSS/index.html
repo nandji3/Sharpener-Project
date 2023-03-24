@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background-image: url(Registration.jpg);
+      }
+      fieldset {
+        background-color: rgb(245, 230, 210);
+        padding: 20px;
+        width: 600px;
+        margin: auto; /*to take filedset at center*/
+      }
+      input[type="text"],
+      [type="email"],
+      [type="tel"] {
+        width: 95%;
+        margin: 2px;
+        padding: 4px;
+      }
+      input[type="date"],
+      [type="time"] {
+        width: 45.5%;
+        margin: 2px;
+        padding: 4px;
+      }
+      input[type="button"] {
+        width: 95%;
+        margin: 2px;
+        padding: 4px;
+        color: rgb(228, 33, 78);
+      }
+
+      h2,
+      h5 {
+        text-align: center;
+      }
+      hr {
+        border-color: rgb(180, 169, 169); /*to take the thematic line*/
+      }
+    </style>
+  </head>
+  <body>
+    <fieldset>
+      <h2>Book a call</h2>
+      <h5>
+        Book a call and our representative will call you within 1hr of selected
+        time
+      </h5>
+      <hr />
+      <form action="#" onsubmit="registerUser(event)">
+        <label>Name : </label><br />
+        <input type="text" id="name" name="username" required /><br /><br />
+
+        <label>Email : </label><br />
+        <input type="email" id="email" name="email" required /><br /><br />
+
+        <label>Phone : </label><br />
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          maxlength="10"
+          required
+        /><br /><br />
+
+        <label>Time for Call</label><br />
+        <input type="date" id="date" name="date" required />
+        <input type="time" id="time" name="time" required /><br /><br />
+
+        <input type="submit" value="GET A CALL" />
+      </form>
+    </fieldset>
+    <script>
+      function registerUser(event) {
+        event.preventDefault();
+        const Name = document.getElementById("name").value;
+        console.log(Name);
+        const Email = document.getElementById("email").value;
+        console.log(Email);
+        const Mobile = document.getElementById("phone").value;
+        console.log(Mobile);
+        const Date = document.getElementById("date").value;
+        console.log(Date);
+        const Time = document.getElementById("time").value;
+        console.log(Time);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>JS For Beginners</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>JS For Beginners</h1>
+    </header>
+
+    <section class="container">
+      <form id="my-form">
+        <h1>Add User</h1>
+        <div class="msg"></div>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" />
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="text" id="email" />
+        </div>
+        <input type="submit" class="btn" id="on-submit" value="Submit" />
+      </form>
+      <ul id="users"></ul>
+      <!--
+      <ul class="items" id="un-ordered-list">
+        <li class="item" id="first">Item 1</li>
+        <li class="item">Item 2</li>
+        <li class="item">Item 3</li>
+      </ul>
+    </section>
+    -->
+      <!--
+    <footer>
+      <h4 id="head-color">Designed By : Nand Ji Jayaswal</h4>
+      <h6>contact : nandji@gmail.com</h6>
+    </footer> 
+    --></section>
+    <!--<script src="dom.js"></script>-->
+    <script>
+      //Now take the value in the form and console log the value in the browsers
+      const myForm = document.querySelector("#my-form");
+      const nameInput = document.querySelector("#name");
+      const emailInput = document.querySelector("#email");
+      const msg = document.querySelector(".msg");
+      const userList = document.querySelector("#users");
+
+      myForm.addEventListener("submit", onSubmit);
+      function onSubmit(e) {
+        e.preventDefault();
+
+        //console.log(nameInput.value);
+        //console.log(email.value);
+        if (nameInput.value === "" || email.value === "") {
+          msg.classList.add("error"); //this is error background color added from CSS style sheet
+          msg.innerHTML = "Please enter all text field * ";
+          setTimeout(() => msg.remove(), 3000); //after 3Sec. error will be dissappeared
+        } else {
+          const node = document.createElement("li");
+          const textNode = document.createTextNode(
+            `Name : ${nameInput.value} : ${emailInput.value}`
+          );
+          node.appendChild(textNode);
+          userList.append(node);
+          //clear fields
+          nameInput.value = " ";
+          emailInput.value = " ";
+        }
+      }
+    </script>
+  </body>
+</html>
