@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+
+  <!-- BootStrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+    integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous" />
+
+</head>
+<body>
+  <div class="container">
+    <div class="card px-3 py-3 mt-4 bg-light text-dark bg-opacity-80">
+
+      <div>
+        <h3 class="text-dark text-sm-center">Expense Tracker</h3>
+        <hr>
+      </div>
+
+      <div class="mb-2 mt-3">
+        <lable>Choose Expense Amount : </lable>
+        <input type="number" class="expense" id="amount" placeholder="Enter expense amount">
+      </div>
+
+      <div class="mb-2 mt-3">
+        <lable>Choose Description : </lable>
+        <input type="text" class="description" id="des" placeholder="Expense On">
+      </div>
+
+      <div class="mb-2 mt-3">
+        <lable>Choose a Category : </lable>
+        <select class="description" id="detail" placeholder="Expense on">
+          <option value="Movie">Movie</option>
+          <option value="Fuel">Fuel</option>
+          <option value="Travel">Travel</option>
+          <option value="Food">Food</option>
+          <option value="Electricity">Electricity</option>
+        </select>
+      </div>
+
+      <div class="align-self-auto">
+        <input type="button" class="btn btn-primary btn-sm ml-auto mt-3" id="btn" title="click" value="Add Expenses">
+      </div>
+
+      <div>
+        <hr class="badge-pill">
+      </div>
+
+      <div>
+        <h5 class="text-info">Add Expenses</h5>
+        <ul class="list-group ml-3" id="items">
+
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="dom.js"></script>
+
+</body>
+
+</html>
