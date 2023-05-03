@@ -35,6 +35,18 @@ function deletePost() {
   })
 }
 
+//by using Promise
 Promise.all([createPost({ title: 'Post Five', body: 'This is Post Five' }), updateLastUserActivityTime(), deletePost()])
 
   .then((res) => console.log(res));
+
+
+//by using async-await
+const result = async () => {
+  const res = await Promise.all([createPost({ title: 'Post Five', body: 'This is Post Five' }), updateLastUserActivityTime()])
+  console.log(res);
+  const res2 = await deletePost();
+  console.log(res2);
+}
+result();
+
