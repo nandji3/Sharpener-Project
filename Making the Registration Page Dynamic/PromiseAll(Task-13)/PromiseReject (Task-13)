@@ -1,0 +1,28 @@
+console.log('person 1: shows ticket');
+console.log('person 2: shows ticket');
+
+const preMovie = async () => {
+  const promiseWifeBringingTicket = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject('ticket');
+    }, 2000)
+  });
+  let ticket;
+  try {
+    ticket = await promiseWifeBringingTicket;
+  } catch (error) {
+    ticket = 'sad face'
+  }
+  return ticket;
+}
+
+preMovie().then((result) => console.log(`person 3: show ${result}`));
+
+console.log('person 4: shows ticket');
+console.log('person 5: shows ticket');
+
+
+
+
+
+

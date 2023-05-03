@@ -1,0 +1,22 @@
+const testUserForm = async () => {
+  const loadUserForm = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('Page Loaded'), 3000);
+  });
+
+  const enterUserName = new Promise((resolve, reject) => {
+    setTimeout(() => resolve('user entered'), 3000);
+  });
+
+  const verifyUserDetails = () => {
+
+  }
+
+  await loadUserForm;
+  await enterUserName;
+
+  const testResult = verifyUserDetails();
+  return testResult;
+
+}
+
+testUserForm().then((result) => { console.log(`show ${result}`) });
