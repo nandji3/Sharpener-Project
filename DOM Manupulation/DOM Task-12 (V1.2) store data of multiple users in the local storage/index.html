@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>JS For Beginners</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+    integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous" />
+</head>
+<body>
+  <header>
+    <h1>JS For Beginners</h1>
+  </header>
+
+  <div class="container">
+    <form id="my-form">
+      <h1>Add User</h1>
+      <div class="msg"></div>
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="text" id="email" />
+      </div>
+      <div>
+        <label for="phone">Mobile:</label>
+        <input type="text" id="phone" />
+      </div>
+      <input type="submit" class="btn" id="on-submit" value="Submit" />
+    </form>
+    <ul id="users" class="list-group"></ul>
+
+  </div>
+  <script src="dom.js"></script>
+
+</body>
+</html>
