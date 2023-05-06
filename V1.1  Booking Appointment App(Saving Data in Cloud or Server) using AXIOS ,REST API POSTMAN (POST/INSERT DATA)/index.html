@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Booking Appointment</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+    integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous" />
+</head>
+
+<body>
+  <div class="container-fluid mx-5">
+    <div class="row">
+
+      <div class="col-lg-4 vh-100 mt-5">
+
+        <form class="form-control bg-light" id="my-form">
+
+          <header class="text-center mt-4 h4">Book Appointment App</header>
+          <hr class="bg-danger">
+          <h4 id="error"></h4>
+          <div class="from-group">
+            <label for="name">Name : </label>
+            <input type="text" class="form-control" id="name">
+          </div>
+
+          <div class="from-group">
+            <label for="email">Email : </label>
+            <input type="email" class="form-control" id="email">
+          </div>
+
+          <div class="from-group">
+            <label for="mobile">Mobile : </label>
+            <input type="mobile" class="form-control" id="mobile">
+          </div>
+
+          <input type="submit" class="btn btn-info  mt-2 h4" value="Submit" id="button">
+
+        </form>
+
+      </div>
+
+      <div class="col-lg-7 vh-100 my-5">
+        <div class="table-responsive ">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="data-output">
+              <!--  from data fetch throught REST API . -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  </div>
+  </div>
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js">
+  </script>
+  <script src="axios.js"></script>
+
+</body>
+</html>
