@@ -101,3 +101,6 @@ function deleteElement(id) {
       console.log(error);
     })
 }
+
+
+/*REST API LINK ---> https://crudcrud.com/ */
