@@ -4,19 +4,8 @@ axios.defaults.headers.common['X-Auth-Token'] = 'eyJhbGciOiJIUzI1NiIsInR5cCI6Ikp
 
 // GET REQUEST
 function getTodos() {
-  /*
-   //by long method
-  axios({
-     method: 'get',
-     url: 'https://jsonplaceholder.typicode.com/todos',
-     params: {
-       _limit: 5
-     }
-   })
-*/
-
   axios
-    .get('https://jsonplaceholder.typicode.com/todos?_limit=5', { timeout: 5000 })
+    .get('https://jsonplaceholder.typicode.com/todos?_limit=5', { timeout: 2000 })
     .then(res => showOutput(res))
     .catch(err => console.log(err));
 }
@@ -161,6 +150,7 @@ const axiosInstance = axios.create({
 
 // Show output in browser
 function showOutput(res) {
+  console.log(res);
   document.getElementById('res').innerHTML = `
   <div class="card card-body mb-4">
     <h5>Status: ${res.status}</h5>
@@ -203,8 +193,6 @@ document.getElementById('update').addEventListener('click', updateTodo);
 document.getElementById('delete').addEventListener('click', removeTodo);
 document.getElementById('sim').addEventListener('click', getData);
 document.getElementById('headers').addEventListener('click', customHeaders);
-document
-  .getElementById('transform')
-  .addEventListener('click', transformResponse);
+document.getElementById('transform').addEventListener('click', transformResponse);
 document.getElementById('error').addEventListener('click', errorHandling);
 document.getElementById('cancel').addEventListener('click', cancelToken);

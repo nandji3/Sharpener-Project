@@ -8,7 +8,7 @@ const tableBody = document.getElementById("data-output");
 
 
 function getItem() {
-  axios.get("https://crudcrud.com/api/a98a01760cdb45e3bfa5069101bf1d67/appointmentData")
+  axios.get("https://crudcrud.com/api/36df5b8edee944f6b410e3dc38275916/appointmentData")
     .then((resposne) => {
       showUserOnScreen(resposne.data);
     })
@@ -34,7 +34,7 @@ function onSubmit(e) {
   }
 
   if (newID === -1) {
-    axios.post("https://crudcrud.com/api/a98a01760cdb45e3bfa5069101bf1d67/appointmentData", obj)
+    axios.post("https://crudcrud.com/api/36df5b8edee944f6b410e3dc38275916/appointmentData", obj)
       .then((resposne) => {
         location.reload();
       })
@@ -43,7 +43,7 @@ function onSubmit(e) {
       })
   }
   else {
-    axios.put("https://crudcrud.com/api/a98a01760cdb45e3bfa5069101bf1d67/appointmentData/" + newID, obj)
+    axios.put("https://crudcrud.com/api/36df5b8edee944f6b410e3dc38275916/appointmentData/" + newID, obj)
       .then((resposne) => {
         location.reload();
       })
@@ -64,17 +64,17 @@ function showUserOnScreen(responseData) {
         <td>${object.mobile}</td>
         <td>
           <input type="button" onclick="editElement('${object._id}')" class="btn-primary" "id="edit" value="Edit"> 
-          <input type="button" onclick="deleteElement('${object._id}')" class="btn-danger" id="delete" value="Delete"> 
+          <input type="button" onclick="deleteElement('${object._id}')" class="btn-danger " id="delete" value="Delete"> 
         </td>
     </tr>`
   })
   tableBody.innerHTML = tableData;
 }
 
-
+//this is only for data show on text field when click on edit button
 function editElement(id) {
-  console.log(id);
-  axios.get("https://crudcrud.com/api/a98a01760cdb45e3bfa5069101bf1d67/appointmentData/" + id)
+  //console.log(id);
+  axios.get("https://crudcrud.com/api/36df5b8edee944f6b410e3dc38275916/appointmentData/" + id)
     .then((resposne) => {
       let editableData = resposne.data;
 
@@ -83,7 +83,6 @@ function editElement(id) {
       inputMobile.value = editableData.mobile;
 
       newID = id;
-      //location.reload();
     })
     .catch((error) => {
       console.log(error);
@@ -92,7 +91,7 @@ function editElement(id) {
 
 
 function deleteElement(id) {
-  axios.delete("https://crudcrud.com/api/a98a01760cdb45e3bfa5069101bf1d67/appointmentData/" + id)
+  axios.delete("https://crudcrud.com/api/36df5b8edee944f6b410e3dc38275916/appointmentData/" + id)
 
     .then((resposne) => {
       location.reload();
